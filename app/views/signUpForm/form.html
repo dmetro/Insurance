@@ -1,0 +1,36 @@
+﻿<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+        <div class="form-inline" id="form-container">
+
+            <div class="page-header text-center">
+                <h2>Let's Be Friends</h2>
+
+                <!-- the links to our nested states using relative paths -->
+                <!-- add the active class if the state matches our ui-sref -->
+                <div id="status-buttons" class="text-center">
+                    <a ui-sref-active="active" ui-sref=".UserInfo"><span>1</span> User info</a>
+                    <a ui-sref-active="active" ui-sref=".UserInfoPart2"><span>2</span> User info 2</a>
+                    <a ui-sref-active="active" ui-sref=".chooseProduct"><span>3</span> Choose Product</a>
+                </div>
+            </div>
+
+            <!-- use ng-submit to catch the form submission and use our Angular function -->
+            <form id="signup-form" ng-submit="processForm()">
+                <div class="row top-buffer">
+                    <img src="/app/images/dudu.png"
+                         style="max-height: 200px; max-width: 200px; margin-top :50px;"
+                         class="img-circle center-block"
+                         alt="Circular Image">
+                </div>
+                <!-- our nested state views will be injected here -->
+                <div id="form-views" ui-view></div>
+
+            </form>
+        </div>
+        <pre>
+        {{ user }}
+    </pre>
+
+    </div>
+</div>

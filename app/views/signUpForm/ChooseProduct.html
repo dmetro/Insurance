@@ -1,0 +1,84 @@
+﻿
+    <div class="row top-buffer">
+        <div class="text-center text-nowrap text font-weight-bold">
+            <h1>בחר מוצר</h1>
+        </div>
+    </div>
+    <div class="row category-child center-block" ng-show="pensionProducts.length>0" style="margin-top:20px">
+        <div class="centered-wrapper">
+            <div class="item-wrap">
+                <div class="item" ng-repeat="pension in pensionProducts" ">
+                    <h2>{{pension.company | uppercase}}</h2>
+                    <img class="thumb" ng-src="{{pension.img}}" onclick="changeImage(this);" />
+                    <span class="close-icon" onclick="closeImage(this);"></span>
+                    <p>{{pension.name | limitTo : 95}}</p>
+                    <h2>הפקדה - {{pension.hafkada}}</h2>
+                    <h2>צבירה - {{pension.zvira}}</h2>
+                    <button class="btn-info btn-lg">הצטרף</button>
+                    <div class="panel" ng-show="tab === 1">
+                        <h2>Description</h2>
+                        <p>{{product.description}}</p>
+                        <span class="close-icon" ng-click="tab = 0" style="display:block;"></span>
+                        <ul class="nav nav-pills">
+                            <li ng-class="{active:tab === 1}"><a href ng-click="tab = 1">Description</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row top-buffer row category-child center-block">
+        <div class="text-center text-nowrap text font-weight-bold">
+            <h1>השתלמות</h1>
+        </div>
+        <div class="row category-child center-block" ng-show="histalmutProducts.length>0" style="margin-top:20px">
+            <div class="centered-wrapper">
+                <div class="item-wrap">
+                    <div class="item" ng-repeat="pension in histalmutProducts">
+                        <h2>{{pension.company | uppercase}}</h2>
+                        <img class="thumb" ng-src="{{pension.img}}" onclick="changeImage(this);" />
+                        <span class="close-icon" onclick="closeImage(this);"></span>
+                        <p>{{pension.name | limitTo : 95}}</p>
+
+                        <h2 ng-show="pension.hafkada >0">הפקדה - {{pension.hafkada}}</h2>
+                        <h2>צבירה - {{pension.zvira}}</h2>
+                        <button class="btn-info btn-lg">הצטרף</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row top-buffer">
+        <div class="text-center text-nowrap text font-weight-bold">
+            <h1>חסכון גמל</h1>
+        </div>
+        <div class="row category-child center-block" ng-show="gemelhisahon.length>0" style="margin-top:20px">
+            <div class="centered-wrapper">
+                <div class="item-wrap">
+                    <div class="item" ng-repeat="pension in gemelhisahon">
+                        <h2>{{pension.company | uppercase}}</h2>
+                        <img class="thumb" ng-src="{{pension.img}}" onclick="changeImage(this);" />
+                        <span class="close-icon" onclick="closeImage(this);"></span>
+                        <p>{{pension.name | limitTo : 95}}</p>
+
+                        <h2 ng-show="pension.hafkada >0">הפקדה - {{pension.hafkada}}</h2>
+                        <h2>צבירה - {{pension.zvira}}</h2>
+                        <button class="btn-info btn-lg">הצטרף</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-sm-12">
+            <div class="text-center">
+                <button type="button"
+                        class="btn btn-success "
+                        ng-click="fisnihSteptwo()">
+                    המשך
+                </button>
+            </div>
+        </div>
+    </div>
+

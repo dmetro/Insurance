@@ -1,0 +1,225 @@
+﻿body {
+    background-color: white;
+}
+
+@bg-color: white;
+
+p {
+    color: lighten(@bg-color, 50%);
+
+    .something {
+        .hello {
+            &:hover {
+            }
+        }
+    }
+}
+
+p .something {
+}
+
+p .something .hello {
+}
+
+p .something .hello:hover {
+}
+
+.center-form {
+    display: inline-block;
+}
+
+.top-buffer {
+    margin-top: 20px;
+}
+
+.category-child .post-content span {
+    color: #fff;
+}
+
+
+
+.wrapper {
+    width: 100%;
+}
+
+.centered-wrapper {
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.item-wrap,
+.general-desc-wrap {
+    width: 100%;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.general-desc-wrap {
+    padding: 0 85px;
+}
+
+.item-wrap .item {
+    position: relative;
+    border: 1px solid #ccc;
+    width: 242px;
+    min-height: 297px;
+    border-radius: 5px;
+    padding: 25px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    vertical-align: top;
+}
+
+.item-wrap .item h2 {
+    margin: 0px 0 15px 0;
+    padding: 0px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.item-wrap .item h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #C30;
+}
+
+.item-wrap .item p {
+    font-weight: 300;
+    margin-top: 150px;
+}
+
+.item-wrap .item img.thumb {
+    height: 140px;
+    cursor: pointer;
+    background: #fff;
+    left: 50%;
+    max-width :150px;
+    margin-left: -55px;
+    top: 60px;
+}
+
+.item-wrap .item img.full {
+    height: 197px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+    left: 0;
+    margin-left: 0;
+    top: 0;
+}
+
+.item-wrap .item img.thumb,
+.item-wrap .item img.full {
+    -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+    -moz-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+    -o-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+    position: absolute;
+}
+
+.close-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: none;
+    width: 24px;
+    height: 24px;
+    background: url(https://cdn4.iconfinder.com/data/icons/e-commerce-icon-set/48/Remove-32.png) left top no-repeat;
+    background-size: 100%;
+    z-index: 4;
+    cursor: pointer;
+}
+
+
+.sold-out {
+    cursor: default;
+    background-color: #eee;
+    color: #aaa;
+}
+
+.nav.nav-pills {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav.nav-pills li {
+    float: none;
+    display: inline-block;
+}
+
+.item .panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 272px;
+    border-radius: 5px 5px 0px 0px;
+    padding: 25px;
+    box-sizing: border-box;
+    overflow: auto;
+    z-index: 3;
+}
+
+.item .panel h2 {
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.item .panel p {
+    margin-top: 15px;
+}
+
+.item .panel .close-icon {
+    right: 24px;
+    top: 24px;
+}
+/* form styling */
+#form-container {
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#form-container .page-header {
+    background: #151515;
+    margin: 0;
+    padding: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* numbered buttons */
+#status-buttons {
+}
+
+#status-buttons a {
+    color: #FFF;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#status-buttons a:hover {
+    text-decoration: none;
+}
+
+/* we will style the span as the circled number */
+#status-buttons span {
+    background: #080808;
+    display: block;
+    height: 30px;
+    margin: 0 auto 10px;
+    padding-top: 5px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+/* active buttons turn light green-blue*/
+#status-buttons a.active span {
+    background: #00BC8C;
+}

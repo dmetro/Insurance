@@ -1,0 +1,37 @@
+﻿
+    <div class="row top-buffer">
+        <div class="text-center text-nowrap text font-weight-bold">
+            <h1>היי אני דודו! אנו מתחילים למלא שאלון הצטרפות קצר.</h1>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class=" text-center">
+            <form class="form-inline">
+                <div class="form-group">
+                    <input type="text"
+                           ng-model="user.Name"
+                           class="form-control"
+                           id="name"
+                           placeholder="שם פרטי" required>
+                </div>
+                <div class="form-group">
+                    <input type="text"
+                           ng-model="user.LasName"
+                           class="form-control"
+                           id="exampleInputEmail2"
+                           placeholder="שם משפחה" required>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-sm-12">
+            <div class="text-center">
+                <button type="button"
+                        class="btn btn-success "
+                        ng-click="FinishStepOne()">
+                    קדימה לדרך
+                </button>
+            </div>
+        </div>
+    </div>

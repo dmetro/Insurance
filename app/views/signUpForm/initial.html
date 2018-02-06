@@ -1,0 +1,55 @@
+﻿<style>
+    .bottom-nav {
+        margin-top: 15px;
+    }
+
+    @media (min-width: 661px) {
+        .landing-title {
+            color: white;
+            background: #28baea;
+            padding: 7px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 71px;
+            font-size: 1.5em;
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+    @media (min-width: 451px) and (max-width: 660px) {
+
+        .landing-title {
+            color: white;
+            background: #28baea;
+            padding: 7px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 71px;
+            font-size: 1em;
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .landing-title {
+            color: white;
+            background: #28baea;
+            padding: 7px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 71px;
+            font-size: 0.8em;
+            width: 100%;
+            margin: auto;
+        }
+    }
+</style>
+
+
+<div ng-if="!isInApp()" class="blue-line"></div>
+<div ng-if="isInApp()" style="margin-top: 20px;"></div>
+
+
+<div ui-view></div>

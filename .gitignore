@@ -1,0 +1,6 @@
+public/app.js
+public/app.js
+*.vs/
+/node_modules
+/bower_components
+/packages

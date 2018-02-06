@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app="Getpensia">
+<head>
+    <title>title title</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/app/dist/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/angular-wizard@latest/dist/angular-wizard.min.css">
+    <script type="text/javascript" src="/app/dist/libs.bundle.js"></script>
+    <script type="text/javascript" src="/app/dist/app.bundle.js"></script>
+</head>
+<body ng-controller="mainController" dir="rtl">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <script>
+        function updateCounterLoop() {
+            jQuery.get('https://join.getpensia.co.il/api/backend/users', function (data) {
+                jQuery('#people').text(data.users);
+            });
+            window.setTimeout(updateCounterLoop, 3000);
+        }
+
+        jQuery(function () { updateCounterLoop(); });
+    </script>
+
+    <span id="people" style="color: #28baea; font-size: 80px; line-height: 80px;"></span>
+    <ui-view />
+
+</body>
+</html>
